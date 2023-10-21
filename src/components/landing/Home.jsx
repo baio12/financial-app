@@ -1,6 +1,7 @@
 import { getPokemons } from "@/apiClient/operations/pokemons";
 import { LANDING_PAGE_CONSTANTS } from "@/src/constants"
 import { useEffect, useState } from "react"
+import Badge from "../hooks/Badge";
 
 export default function Home() {
 
@@ -22,7 +23,8 @@ export default function Home() {
     
     return (
         <section className="w-full p-4">
-            <div className="flex flex-col lg:flex-row justify-between gap-4">
+            <Badge text="ready" />
+            <div className="flex flex-col lg:flex-row justify-between gap-4 pt-4">
                 <div className="text-blue-900 font-medium">
                     {LANDING_PAGE_CONSTANTS.LANDING_PAGE_TITLE}
                 </div>
